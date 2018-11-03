@@ -1,0 +1,42 @@
+{
+  "name": "@dollarshaveclub/cloudworker",
+  "version": "0.0.1",
+  "description": "node.js runner for Cloudflare Workers",
+  "main": "index.js",
+  "bin": {
+    "cloudworker": "./bin/cloudworker.js"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint . --fix",
+    "lint:ci": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dollarshaveclub/cloudworker.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dollarshaveclub/cloudworker/issues"
+  },
+  "homepage": "https://github.com/dollarshaveclub/cloudworker#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "moment": "^2.22.2",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-dollarshaveclub": "^3.1.0",
+    "eslint-plugin-jest": "^21.26.2",
+    "jest": "^23.6.0",
+    "jest-fetch-mock": "^1.6.6"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ]
+  }
+}

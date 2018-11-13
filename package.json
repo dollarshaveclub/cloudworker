@@ -1,6 +1,6 @@
 {
   "name": "@dollarshaveclub/cloudworker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node.js runner for Cloudflare Workers",
   "main": "index.js",
   "bin": {
@@ -19,6 +19,14 @@
   "bugs": {
     "url": "https://github.com/dollarshaveclub/cloudworker/issues"
   },
+  "keywords": [
+    "cloudflare",
+    "service worker",
+    "workers",
+    "worker",
+    "cloudflare worker",
+    "cloudworker"
+  ],
   "homepage": "https://github.com/dollarshaveclub/cloudworker#readme",
   "dependencies": {
     "commander": "^2.19.0",

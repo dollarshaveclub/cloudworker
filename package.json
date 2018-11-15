@@ -37,6 +37,7 @@
     "text-encoding": "^0.7.0"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "eslint": "^5.8.0",
     "eslint-config-dollarshaveclub": "^3.1.0",
     "eslint-plugin-jest": "^21.26.2",
@@ -49,6 +50,9 @@
     "setupFiles": [
       "./jest-setup.js"
     ],
-    "setupTestFrameworkScriptFile": "./jest-setup-framework.js"
+    "setupTestFrameworkScriptFile": "./jest-setup-framework.js",
+    "testPathIgnorePatterns": [
+      "fixtures"
+    ]
   }
 }

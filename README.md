@@ -14,6 +14,18 @@ npm install -g @dollarshaveclub/cloudworker
 ## Usage
 
 ```sh
+Usage: cloudworker [options] <file>
+
+Options:
+  -p, --port <port>              Port (default: 3000)
+  -d, --debug                    Debug
+  -s, --set [variabe.key=value]  Binds variable to a local implementation of Workers KV and sets key to value (default: [])
+  -w, --wasm [variable=path]     Binds variable to wasm located at path (default: [])
+  -h, --help                     output usage information
+```
+
+### Simple
+```sh
 cloudworker worker.js
 curl localhost:3000/
 ```
@@ -23,10 +35,37 @@ cloudworker --debug worker.js
 curl localhost:3000/
 ```
 
+### Workers KV
 ```sh
-cloudworker --set KeyValueStore.key=value --set KeyValueStore.hello=world worker.js
+cloudworker --debug --set KeyValueStore.key=value --set KeyValueStore.hello=world worker.js
 curl localhost:3000/
 ```
+
+### WebAssembly
+#### Simple 
+
+```sh
+cloudworker --debug --wasm Wasm=example/simple.wasm example/example-wasm-simple.js
+curl localhost:3000/
+```
+[WebAssembly Source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/simple.wat)
+
+
+#### Inverse Square Root
+```sh
+cloudworker --debug --wasm isqrt=example/isqrt.wasm example/example-wasm-isqrt.js
+curl localhost:3000/?num=9
+```
+[WebAssembly Source](https://developers.cloudflare.com/workers/api/resource-bindings/webassembly-modules/)
+
+
+#### Resizer 
+
+```sh
+cloudworker --debug --wasm RESIZER_WASM=example/resizer.wasm example/example-wasm-resizer.js
+curl localhost:3000/wasm-demo/dogdrone.png?width=210 # or open in browser
+```
+[WebAssembly Source](https://github.com/cloudflare/cloudflare-workers-wasm-demo)
 
 ## Cloudflare Worker Compatibility 
 

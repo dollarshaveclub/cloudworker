@@ -42,7 +42,7 @@ function run (file, wasmBindings) {
   const bindings = utils.extractKVBindings(program.set)
   Object.assign(bindings, wasmBindings)
 
-  const server = new Cloudworker({workerScript: script, debug: program.debug, bindings: bindings}).listen(program.port)
+  const server = new Cloudworker(script, {debug: program.debug, bindings: bindings}).listen(program.port)
   console.log(`Listening on ${program.port}`)
 
   let stopping = false

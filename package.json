@@ -48,9 +48,6 @@
   "jest": {
     "testEnvironment": "./jest-env",
     "automock": false,
-    "setupFiles": [
-      "./jest-setup.js"
-    ],
     "setupTestFrameworkScriptFile": "./jest-setup-framework.js",
     "testPathIgnorePatterns": [
       "fixtures"

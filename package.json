@@ -1,6 +1,6 @@
 {
   "name": "@dollarshaveclub/cloudworker",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "node.js runner for Cloudflare Workers",
   "main": "index.js",
   "bin": {
@@ -48,9 +48,6 @@
   "jest": {
     "testEnvironment": "./jest-env",
     "automock": false,
-    "setupFiles": [
-      "./jest-setup.js"
-    ],
     "setupTestFrameworkScriptFile": "./jest-setup-framework.js",
     "testPathIgnorePatterns": [
       "fixtures"

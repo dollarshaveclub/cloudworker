@@ -19,6 +19,7 @@ program
   .option('-d, --debug', 'Debug', false)
   .option('-s, --set [variabe.key=value]', 'Binds variable to a local implementation of Workers KV and sets key to value', collect, [])
   .option('-w, --wasm [variable=path]', 'Binds variable to wasm located at path', collect, [])
+  .option('-c, --enable-cache', 'Enables cache <BETA>', false)
   .action(f => { file = f })
   .parse(process.argv)
 
@@ -42,7 +43,9 @@ function run (file, wasmBindings) {
   const bindings = utils.extractKVBindings(program.set)
   Object.assign(bindings, wasmBindings)
 
-  const server = new Cloudworker(script, {debug: program.debug, bindings: bindings}).listen(program.port)
+  const opts = {debug: program.debug, enableCache: program.enableCache, bindings: bindings}
+  const server = new Cloudworker(script, opts).listen(program.port)
+
   console.log(`Listening on ${program.port}`)
 
   let stopping = false

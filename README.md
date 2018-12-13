@@ -21,6 +21,7 @@ Options:
   -d, --debug                    Debug
   -s, --set [variabe.key=value]  Binds variable to a local implementation of Workers KV and sets key to value (default: [])
   -w, --wasm [variable=path]     Binds variable to wasm located at path (default: [])
+  -c, --enable-cache             Enables cache <BETA>
   -h, --help                     output usage information
 ```
 

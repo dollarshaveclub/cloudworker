@@ -32,6 +32,8 @@
     "@mattiasbuelens/web-streams-polyfill": "^0.1.0",
     "arraybuffer-equal": "^1.0.4",
     "commander": "^2.19.0",
+    "http-cache-semantics": "^4.0.1",
+    "lru-cache": "^5.1.1",
     "moment": "^2.22.2",
     "node-fetch": "^2.2.0",
     "text-encoding": "^0.7.0"

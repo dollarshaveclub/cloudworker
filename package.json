@@ -36,7 +36,8 @@
     "http-cache-semantics": "^4.0.1",
     "lru-cache": "^5.1.1",
     "moment": "^2.22.2",
-    "text-encoding": "^0.7.0"
+    "text-encoding": "^0.7.0",
+    "b2a": "^1.0.10"
   },
   "devDependencies": {
     "axios": "^0.18.0",

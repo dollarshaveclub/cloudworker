@@ -46,7 +46,7 @@ function run (file, wasmBindings) {
   Object.assign(bindings, wasmBindings)
 
   const opts = {debug: program.debug, enableCache: program.enableCache, bindings: bindings}
-  const server = new Cloudworker(script, opts).listen(program.port)
+  let server = new Cloudworker(script, opts).listen(program.port)
 
   console.log(`Listening on ${program.port}`)
 

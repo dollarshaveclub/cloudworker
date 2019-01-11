@@ -1,6 +1,6 @@
 {
   "name": "@dollarshaveclub/cloudworker",
-  "version": "0.0.7",
+  "version": "0.0.7-r",
   "description": "node.js runner for Cloudflare Workers",
   "main": "index.js",
   "bin": {

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "tslint-config-standard"
+  ],
+  "rules": {
+    "no-console": false,
+    "interface-name": false,
+    "semicolon": {
+      "options": ["never"]
+    },
+    "no-empty": false,
+    "no-floating-promises": false,
+    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }]
+  }
+}

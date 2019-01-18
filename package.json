@@ -37,6 +37,7 @@
     "lru-cache": "^5.1.1",
     "moment": "^2.22.2",
     "text-encoding": "^0.7.0",
+    "node-webcrypto-ossl": "^1.0.39",
     "b2a": "^1.0.10"
   },
   "devDependencies": {

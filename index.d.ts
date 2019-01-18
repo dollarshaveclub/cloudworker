@@ -13,7 +13,7 @@ declare interface CloudworkerInit {
 
 declare class Cloudworker {
   constructor (script: string, opts?: CloudworkerInit)
-  dispatch (request: Request)
+  dispatch (request: Request): void
   listen (...args: any[]): http.Server
 }
 

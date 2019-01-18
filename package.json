@@ -9,7 +9,9 @@
   "scripts": {
     "test": "jest --coverage",
     "lint": "eslint . --fix",
-    "lint:ci": "eslint ."
+    "lint:ci": "eslint .",
+    "tsc-check": "tsc --noEmit --project .",
+    "tslint": "tslint --project tsconfig.json --config tslint.json 'index.d.ts'"
   },
   "repository": {
     "type": "git",

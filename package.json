@@ -3,6 +3,7 @@
   "version": "0.0.9",
   "description": "node.js runner for Cloudflare Workers",
   "main": "index.js",
+  "types": "index.d.ts",
   "bin": {
     "cloudworker": "./bin/cloudworker.js"
   },

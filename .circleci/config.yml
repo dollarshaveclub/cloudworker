@@ -32,6 +32,8 @@ jobs:
       - checkout
       - *restore_cache
       - run: npm run lint:ci
+      - run: npm run tslint
+      - run: npm run tsc-check
   test:
     <<: *defaults
     steps:

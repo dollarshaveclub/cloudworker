@@ -35,13 +35,13 @@ cw.dispatch(req).then((res) => {
 Usage: cloudworker [options] <file>
 
 Options:
-  -p, --port <port>              Port (default: 3000)
-  -d, --debug                    Debug
-  -s, --set [variabe.key=value]  Binds variable to a local implementation of Workers KV and sets key to value (default: [])
-  -w, --wasm [variable=path]     Binds variable to wasm located at path (default: [])
-  -c, --enable-cache             Enables cache <BETA>
-  -r, --watch                    Watch the worker script and restart the worker when changes are detected
-  -h, --help                     output usage information
+  -p, --port <port>               Port (default: 3000)
+  -d, --debug                     Debug
+  -s, --set [variable.key=value]  Binds variable to a local implementation of Workers KV and sets key to value (default: [])
+  -w, --wasm [variable=path]      Binds variable to wasm located at path (default: [])
+  -c, --enable-cache              Enables cache <BETA>
+  -r, --watch                     Watch the worker script and restart the worker when changes are detected
+  -h, --help                      output usage information
 ```
 
 ### Simple

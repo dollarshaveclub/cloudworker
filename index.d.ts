@@ -17,6 +17,15 @@ declare class Cloudworker {
   listen (...args: any[]): http.Server
 }
 
+type ValidType = 'text' | 'json' | 'arrayBuffer' | 'stream'
+declare class KeyValueStore {
+  constructor ()
+
+  get (key: string, type?: ValidType): Promise<string | ArrayBuffer | Object | ReadableStream>
+  put (key: string, value: string | ReadableStream | ArrayBuffer | FormData): Promise<undefined>
+  delete (key: string): Promise<undefined>
+}
+
 declare namespace Cloudworker {
 
   export function fetch (input: RequestInfo, init?: RequestInit): Promise<Response>

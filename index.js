@@ -1,4 +1,5 @@
 const runtime = require('./lib/runtime')
+const kv = require('./lib/kv')
 
 module.exports = require('./lib/cloudworker')
 
@@ -15,3 +16,4 @@ module.exports.TextDecoder = runtime.TextDecoder
 module.exports.TextEncoder = runtime.TextEncoder
 module.exports.atob = runtime.atob
 module.exports.btoa = runtime.btoa
+module.exports.KeyValueStore = kv.KeyValueStore

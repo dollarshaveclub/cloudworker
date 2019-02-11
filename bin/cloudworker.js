@@ -18,7 +18,7 @@ program
   .usage('[options] <file>')
   .option('-p, --port <port>', 'Port', 3000)
   .option('-d, --debug', 'Debug', false)
-  .option('-s, --set [variabe.key=value]', 'Binds variable to a local implementation of Workers KV and sets key to value', collect, [])
+  .option('-s, --set [variable.key=value]', 'Binds variable to a local implementation of Workers KV and sets key to value', collect, [])
   .option('-w, --wasm [variable=path]', 'Binds variable to wasm located at path', collect, [])
   .option('-c, --enable-cache', 'Enables cache <BETA>', false)
   .option('-r, --watch', 'Watch the worker script and restart the worker when changes are detected', false)

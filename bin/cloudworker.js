@@ -19,6 +19,7 @@ program
   .option('-p, --port <port>', 'Port', 3000)
   .option('-d, --debug', 'Debug', false)
   .option('-s, --set [variable.key=value]', 'Binds variable to a local implementation of Workers KV and sets key to value', collect, [])
+  .option('-g, --global [variable=value]', 'Binds global variable to script', collect, [])
   .option('-w, --wasm [variable=path]', 'Binds variable to wasm located at path', collect, [])
   .option('-c, --enable-cache', 'Enables cache <BETA>', false)
   .option('-r, --watch', 'Watch the worker script and restart the worker when changes are detected', false)
@@ -42,10 +43,11 @@ function run (file, wasmBindings) {
   console.log('Starting up...')
   const fullpath = path.resolve(process.cwd(), file)
   const script = utils.read(fullpath)
+  const globals = utils.extractGlobals(program.global)
   const bindings = utils.extractKVBindings(program.set)
   Object.assign(bindings, wasmBindings)
 
-  const opts = {debug: program.debug, enableCache: program.enableCache, bindings: bindings}
+  const opts = {debug: program.debug, enableCache: program.enableCache, bindings: bindings, globals: globals}
   let server = new Cloudworker(script, opts).listen(program.port)
 
   console.log(`Listening on ${program.port}`)

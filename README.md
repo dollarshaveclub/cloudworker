@@ -38,7 +38,7 @@ Options:
   -p, --port <port>                   Port (default: 3000)
   -d, --debug                         Debug
   -s, --kv-set [variable.key=value]   Binds variable to a local implementation of Workers KV and sets key to value (default: [])
-  -f, --kv-file [variable=path]       Set the filepath for value peristence for the local implementation of Workers KV (defualt: [])
+  -f, --kv-file [variable=path]       Set the filepath for value peristence for the local implementation of Workers KV (default: [])
   -w, --wasm [variable=path]          Binds variable to wasm located at path (default: [])
   -c, --enable-cache                  Enables cache <BETA>
   -r, --watch                         Watch the worker script and restart the worker when changes are detected

@@ -1,4 +1,5 @@
 addEventListener('fetch', async event => {
-  const value = await TestNamespace.get('hello')
+  await KeyValueStore.put('persisted', 'true')
+  const value = await KeyValueStore.get('hello')
   event.respondWith(new Response(value))
 })

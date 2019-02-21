@@ -47,24 +47,24 @@ Options:
 
 ### Simple
 ```sh
-cloudworker worker.js
+cloudworker example/example.js
 curl localhost:3000/
 ```
 
 ```sh
-cloudworker --debug worker.js
+cloudworker --debug example/example.js
 curl localhost:3000/
 ```
 
 ### Workers KV
 ```sh
-cloudworker --debug --kv-set KeyValueStore.key=value --kv-set KeyValueStore.hello=world worker.js
+cloudworker --debug --kv-set KeyValueStore.key=value --kv-set KeyValueStore.hello=world example/example-kv.js
 curl localhost:3000/
 ```
 
 ### Workers KV with Persistence
 ```sh
-cloudworker --debug --kv-file KeyValueStore=kv.json --kv-set KeyValueStore.key=value --kv-set KeyValueStore.hello=world worker.js
+cloudworker --debug --kv-file KeyValueStore=kv.json --kv-set KeyValueStore.key=value --kv-set KeyValueStore.hello=world example/example-kv.js
 curl localhost:3000/
 ```
 

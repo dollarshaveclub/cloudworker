@@ -17,3 +17,4 @@ module.exports.TextEncoder = runtime.TextEncoder
 module.exports.atob = runtime.atob
 module.exports.btoa = runtime.btoa
 module.exports.KeyValueStore = kv.KeyValueStore
+module.exports.URLSearchParams = runtime.URLSearchParams

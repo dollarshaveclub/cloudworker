@@ -57,7 +57,7 @@
     "typescript": "^3.2.2"
   },
   "jest": {
-    "testEnvironment": "./jest-env",
+    "testEnvironment": "node",
     "automock": false,
     "setupTestFrameworkScriptFile": "./jest-setup-framework.js",
     "testPathIgnorePatterns": [

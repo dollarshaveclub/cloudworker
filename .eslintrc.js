@@ -10,6 +10,11 @@ module.exports = {
     'jest/globals': true,
   },
   globals: {
-    WebAssembly: false
+    WebAssembly: true,
+    Atomics: true,
+    BigInt: true,
+    BigInt64Array: true,
+    BigUint64Array: true,
+    SharedArrayBuffer: true
   }
 }

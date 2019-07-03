@@ -60,6 +60,9 @@ function run (file, wasmBindings) {
 
   if (program.watch) {
     fs.watchFile(fullpath, () => {
+      if(reloading) {
+        return
+      }
       reloading = true
       console.log('Changes to the worker script detected - reloading...')
 

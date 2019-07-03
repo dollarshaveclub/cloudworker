@@ -60,7 +60,7 @@ function run (file, wasmBindings) {
 
   if (program.watch) {
     fs.watchFile(fullpath, () => {
-      if(reloading) {
+      if (reloading) {
         return
       }
       reloading = true

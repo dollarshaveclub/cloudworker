@@ -42,6 +42,9 @@ Options:
   -w, --wasm [variable=path]          Binds variable to wasm located at path (default: [])
   -c, --enable-cache                  Enables cache <BETA>
   -r, --watch                         Watch the worker script and restart the worker when changes are detected
+  --tls-key <tlsKey>                  Optional. Path to encryption key for serving requests with TLS enabled. Must specify --tls-cert when using this option.
+  --tls-cert <tlsCert>                Optional. Path to certificate for serving requests with TLS enabled. Must specify --tls-key when using this option.
+  --https-port <httpsPort>            Optional. Port to listen on for HTTPS requests. Must specify --tls-cert and --tls-key when using this option. May not be the same value as --port.
   -h, --help                          output usage information
 ```
 

@@ -4,6 +4,8 @@
 
 Cloudworker allows you to run Cloudflare Worker scripts locally. 
 
+Concrete examples on how to use Cloudworker to test your worker scripts can be found [here](https://findwork.dev/blog/testing-cloudflare-workers/).
+
 ## Installing
 
 Install via NPM:

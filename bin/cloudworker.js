@@ -21,7 +21,7 @@ program
   .option('-s, --kv-set [variable.key=value]', 'Binds variable to a local implementation of Workers KV and sets key to value', collect, [])
   .option('-f, --kv-file [variable=path]', 'Set the filepath for value peristence for the local implementation of Workers KV', collect, [])
   .option('-b, --bind [variable=value]', 'Binds variable to the value provided', collect, [])
-  .option('-c, --bind-file [variable=path]', 'Binds variable to the contents of the given file', collect, [])
+  .option('-a, --bind-file [variable=path]', 'Binds variable to the contents of the given file', collect, [])
   .option('-w, --wasm [variable=path]', 'Binds variable to wasm located at path', collect, [])
   .option('-c, --enable-cache', 'Enables cache <BETA>', false)
   .option('-r, --watch', 'Watch the worker script and restart the worker when changes are detected', false)

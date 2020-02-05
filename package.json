@@ -33,7 +33,6 @@
   "homepage": "https://github.com/dollarshaveclub/cloudworker#readme",
   "dependencies": {
     "@dollarshaveclub/node-fetch": "^3.2.0",
-    "web-streams-polyfill": "^2.0.3",
     "arraybuffer-equal": "^1.0.4",
     "atob": "^2.1.2",
     "btoa": "^1.2.1",
@@ -41,7 +40,9 @@
     "http-cache-semantics": "^4.0.3",
     "lru-cache": "^5.1.1",
     "moment": "^2.24.0",
-    "node-webcrypto-ossl": "^1.0.48"
+    "node-webcrypto-ossl": "^1.0.48",
+    "tmp": "^0.1.0",
+    "web-streams-polyfill": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "^10.14.10",

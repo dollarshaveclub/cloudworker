@@ -20,9 +20,12 @@ program
   .option('-d, --debug', 'Debug', false)
   .option('-s, --kv-set [variable.key=value]', 'Binds variable to a local implementation of Workers KV and sets key to value', collect, [])
   .option('-f, --kv-file [variable=path]', 'Set the filepath for value peristence for the local implementation of Workers KV', collect, [])
+  .option('-b, --bind [variable=value]', 'Binds variable to the value provided', collect, [])
+  .option('-a, --bind-file [variable=path]', 'Binds variable to the contents of the given file', collect, [])
   .option('-w, --wasm [variable=path]', 'Binds variable to wasm located at path', collect, [])
   .option('-c, --enable-cache', 'Enables cache <BETA>', false)
   .option('-r, --watch', 'Watch the worker script and restart the worker when changes are detected', false)
+  .option('-t, --site-bucket [path]', 'Simulate Workers Sites deploy by generating KV assets and bindings for the bucket at path', false)
   .option('-s, --set [variable.key=value]', '(Deprecated) Binds variable to a local implementation of Workers KV and sets key to value', collect, [])
   .action(f => { file = f })
   .parse(process.argv)
@@ -40,12 +43,14 @@ wasmLoader.loadBindings(wasmBindings).then(res => {
   process.exit(1)
 })
 
-function run (file, wasmBindings) {
+async function run (file, wasmBindings) {
   console.log('Starting up...')
   const fullpath = path.resolve(process.cwd(), file)
   const script = utils.read(fullpath)
-  const bindings = utils.extractKVBindings(program.kvSet.concat(program.set), program.kvFile)
-  Object.assign(bindings, wasmBindings)
+  const { siteKvFile, siteManifest } = await utils.generateSite(program.siteBucket)
+  const kvBindings = utils.extractKVBindings(program.kvSet.concat(program.set), program.kvFile.concat(siteKvFile))
+  const bindings = utils.extractBindings(program.bind, program.bindFile.concat(siteManifest))
+  Object.assign(bindings, kvBindings, wasmBindings)
 
   // Add a warning log for deprecation
   if (program.set.length > 0) console.warn('Warning: Flag --set is now deprecated, please use --kv-set instead')

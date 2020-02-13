@@ -2,6 +2,8 @@
 
 ***
 
+# ⚠️ Cloudworker is no longer actively maintained at Dollar Shave Club. If you're interested in volunteering to help, please open an issue ⚠️
+
 Cloudworker allows you to run Cloudflare Worker scripts locally. 
 
 ## Installing

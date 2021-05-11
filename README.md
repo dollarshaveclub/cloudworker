@@ -2,7 +2,11 @@
 
 ***
 
-# ⚠️ Cloudworker is no longer actively maintained at Dollar Shave Club. If you're interested in volunteering to help, please open an issue ⚠️
+# Opendoor fork to support node 14
+
+- Replaced "node-webcrypto-ossl" with "@peculiar/webcrypto"
+
+Note: This does not address the issue from https://github.com/dollarshaveclub/cloudworker/pull/81 but our tests run with the simple replacement
 
 Cloudworker allows you to run Cloudflare Worker scripts locally. 
 
